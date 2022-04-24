@@ -1,6 +1,15 @@
 import cv2
-from cv2 import imshow
 
-imshow
+# VideoCapture オブジェクトを取得します
+capture = cv2.VideoCapture(0)
 
-print("Hello!")
+while(True):
+    ret, frame = capture.read()
+    cv2.imshow('frame',frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+capture.release()
+cv2.destroyAllWindows()
+
+print("Finished!")

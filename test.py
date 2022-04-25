@@ -1,4 +1,10 @@
 import cv2
+from tkinter import Tk
+
+app = Tk()
+app.title('デスクトップアプリ')
+app.geometry('300x300')
+# app.mainloop()
 
 # VideoCapture オブジェクトを取得します
 capture = cv2.VideoCapture(0)
@@ -11,5 +17,7 @@ while(True):
 
 capture.release()
 cv2.destroyAllWindows()
+
+app.mainloop()
 
 print("Finished!")

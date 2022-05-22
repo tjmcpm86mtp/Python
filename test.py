@@ -4,7 +4,7 @@ from tkinter import Tk
 app = Tk()
 app.title('デスクトップアプリ')
 app.geometry('300x300')
-# app.mainloop()q
+# app.mainloop()
 
 # VideoCapture オブジェクトを取得します
 capture = cv2.VideoCapture(0)
